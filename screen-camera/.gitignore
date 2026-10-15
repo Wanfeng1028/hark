@@ -1,0 +1,24 @@
+# build outputs
+server/build/
+*.class
+*.dex
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+dist/
+build/
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+local.properties

@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "screen-camera"
+version = "0.1.0"
+description = "Feed a desktop screen region to an Android app's camera (VirtualDeviceManager virtual camera over adb, no root)"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+dependencies = ["mss>=9.0", "Pillow>=10.0"]
+
+[project.scripts]
+screen-camera = "screen_camera.cli:main"
+
+[tool.setuptools]
+packages = ["screen_camera"]

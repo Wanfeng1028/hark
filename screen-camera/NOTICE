@@ -1,0 +1,18 @@
+screen-camera
+Copyright 2026 screen-camera contributors
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This project contains no code from AndroMeld (closed source). Its behaviour was inferred only
+from AndroMeld's public announcement and help pages.
+
+The technique of running framework code under `adb shell app_process` with a minimal
+ActivityThread / shell-identity Context, and of talking to it over an `adb forward`ed local
+abstract socket, is the one popularised by scrcpy (https://github.com/Genymobile/scrcpy,
+Apache-2.0, Copyright Genymobile and contributors). screen-camera's implementation of that
+idea (Env.java, ShellContext.java, FrameServer.java) is independent and reduced; no scrcpy
+source files are included.
+
+API shapes of android.companion.virtual.* in server/hidden-api are compile-only stubs written
+from the public AOSP sources (Apache-2.0, The Android Open Source Project); they are not
+packaged into the server jar.
